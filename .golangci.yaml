@@ -1,0 +1,67 @@
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+  goconst:
+    min-len: 2
+    min-occurrences: 3
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - performance
+      - style
+  govet:
+    check-shadowing: true
+    enable:
+      - fieldalignment
+  nolintlint:
+    require-explanation: true
+    require-specific: true
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - deadcode
+    - depguard
+    - dogsled
+    # - dupl
+    - errcheck
+    - exportloopref
+    # - exhaustive
+    - goconst
+    # - gocritic
+    - gofmt
+    - goimports
+    # - gomnd
+    - gocyclo
+    - gosec
+    - gosimple
+    # - govet
+    - ineffassign
+    - misspell
+    - nolintlint
+    - nakedret
+    - prealloc
+    - predeclared
+    - revive
+    - staticcheck
+    - structcheck
+    - stylecheck
+    - thelper
+    - tparallel
+    - typecheck
+    - unparam
+    - unused
+    - varcheck
+    - whitespace
+
+run:
+  issues-exit-code: 1
+  
+issues:
+  exclude:
+    - "ST1000: at least one file in a package should have a package comment"
+    - "EXC0015: should have a package comment"
+    - "package-comments: should have a package comment"
